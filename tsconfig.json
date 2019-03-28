@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "watch": true
+        "watch": true,
+        "outDir": "./dist"
     }
+
 }
