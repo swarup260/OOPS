@@ -1,5 +1,4 @@
 import { SimpleProduct } from "./SimpleProduct";
-import { SimpleProduct } from "./SimpleProduct";
 import { ConfigurableProduct } from "./ConfigurableProduct";
 import { BundleProduct } from "./BundleProduct";
 import { GroupedProduct } from "./GroupedProduct";
