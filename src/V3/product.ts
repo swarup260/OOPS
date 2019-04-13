@@ -14,9 +14,6 @@ interface productConfig {
   price: number;
   specialPrice: number;
   getType(): string;
-  setAttribute(attributeSetConfig: attributeSetConfig): void;
-  getAllAttribute(): attributeSetConfig[];
-  getAttributeByKey(key: string): boolean | attributeSetConfig;
 }
 
 abstract class Product implements productConfig {
@@ -28,7 +25,7 @@ abstract class Product implements productConfig {
   public status: boolean;
   public price: number;
   public specialPrice: number;
-  protected attributeSet: attributeSetConfig[];
+  // protected attributeSet: attributeSetConfig[];
 
   constructor(productAttribute: productAttributeInterface) {
     this.name = productAttribute.name;
@@ -43,21 +40,21 @@ abstract class Product implements productConfig {
     throw new Error("Type Not Define");
   }
 
-  public setAttribute(attributeSetConfig: attributeSetConfig) {
-    this.attributeSet.push(attributeSetConfig);
-  }
+  // public setAttribute(attributeSetConfig: attributeSetConfig) {
+  //   this.attributeSet.push(attributeSetConfig);
+  // }
 
-  public getAllAttribute(): attributeSetConfig[] {
-    return this.attributeSet;
-  }
-  public getAttributeByKey(key: string): boolean | attributeSetConfig {
-    for (const attribute of this.attributeSet) {
-      if (key == attribute.key) {
-        return attribute;
-      }
-    }
-    return false;
-  }
+  // public getAllAttribute(): attributeSetConfig[] {
+  //   return this.attributeSet;
+  // }
+  // public getAttributeByKey(key: string): boolean | attributeSetConfig {
+  //   for (const attribute of this.attributeSet) {
+  //     if (key == attribute.key) {
+  //       return attribute;
+  //     }
+  //   }
+  //   return false;
+  // }
 
   /* helper function */
   /**

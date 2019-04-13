@@ -1,9 +1,11 @@
 import { SimpleProduct } from "./SimpleProduct";
+import { SimpleProduct } from "./SimpleProduct";
 import { ConfigurableProduct } from "./ConfigurableProduct";
 import { BundleProduct } from "./BundleProduct";
 import { GroupedProduct } from "./GroupedProduct";
 import { Product } from "./product";
 import { productAttributeInterface } from "./productAttributeInterface";
+import { AttributeSetsMixins } from "./utils/Mixins";
 
 enum ProductType {
   Simple = "simple",
@@ -16,18 +18,23 @@ class ProductFactory {
   public static createProduct(
     productAttribute: productAttributeInterface,
     type: ProductType
-  ): Product {
+  ): any {
     switch (type) {
       case ProductType.Simple:
-        return new SimpleProduct(productAttribute);
+        const SimpleP = AttributeSetsMixins(SimpleProduct);
+        return new SimpleP(productAttribute);
       case ProductType.Configurable:
-        return new ConfigurableProduct(productAttribute);
+        const ConfigurableP = AttributeSetsMixins(ConfigurableProduct);
+        return new ConfigurableP(productAttribute);
       case ProductType.BundleProduct:
-        return new BundleProduct(productAttribute);
+        const BundleP = AttributeSetsMixins(BundleProduct);
+        return new BundleP(productAttribute);
       case ProductType.GroupedProduct:
-        return new GroupedProduct(productAttribute);
+        const GroupedP = AttributeSetsMixins(GroupedProduct);
+        return new GroupedP(productAttribute);
       default:
-        return new SimpleProduct(productAttribute);
+        const SimpleD = AttributeSetsMixins(SimpleProduct);
+        return new SimpleD(productAttribute);
     }
   }
 }
