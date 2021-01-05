@@ -1,0 +1,30 @@
+{
+  "name": "oops",
+  "version": "1.0.0",
+  "description": "oops ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require ts-node/register test/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swarup260/OOPS.git"
+  },
+  "keywords": [
+    "OOPS"
+  ],
+  "author": "swarup260@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swarup260/OOPS/issues"
+  },
+  "homepage": "https://github.com/swarup260/OOPS#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.1"
+  }
+}
