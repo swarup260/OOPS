@@ -28,10 +28,10 @@ export class Product {
     this._attributSets = product.attributSets || new Array();
   }
 
-  public addAttribute(attribute): Product {
+  public addAttribute(Attribute): Product {
     this._attributSets.push({
-      attributeType: attribute.key,
-      attribueValue: attribute.value
+      attributeType: Attribute.key,
+      attribueValue: Attribute.value
     });
     return this;
   }
