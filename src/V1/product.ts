@@ -8,7 +8,7 @@ export class Product {
   public qty: number;
   public price: number;
   public specialPrice: number;
-  public status: boolean;
+  public status: Boolean;
   public creationDate: Date;
   public updationDate: Date;
   public type: string;
